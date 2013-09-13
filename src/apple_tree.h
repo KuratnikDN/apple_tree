@@ -15,6 +15,7 @@ class AppleTree {
  public:
   AppleTree();
   void Grow();
+  void Shake();
   
  private:
   std::list<ApplePtr> apples_; 

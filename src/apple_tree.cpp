@@ -19,3 +19,10 @@ void AppleTree::Grow() {
     apples_.push_back(std::make_shared<Apple>());
   }
 }
+
+void AppleTree::Shake() {
+  uint32_t fallen = rand() % (apples_.size() + 1);
+  for (int i = 0; i < fallen; ++i) {
+    apples_.pop_front();
+  }
+}
