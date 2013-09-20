@@ -16,6 +16,7 @@
                    projectFiles="true">
       <itemPath>src/apple.cpp</itemPath>
       <itemPath>src/apple_tree.cpp</itemPath>
+      <itemPath>src/main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -31,7 +32,7 @@
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
-    <conf name="Debug" type="3">
+    <conf name="Debug" type="1">
       <toolsSet>
         <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>default</compilerSet>
@@ -42,8 +43,6 @@
         <ccTool>
           <standard>8</standard>
         </ccTool>
-        <archiverTool>
-        </archiverTool>
       </compileType>
       <item path="src/apple.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -52,6 +51,8 @@
       <item path="src/apple_tree.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/apple_tree.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -83,6 +84,8 @@
       <item path="src/apple_tree.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/apple_tree.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>

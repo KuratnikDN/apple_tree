@@ -18,7 +18,14 @@ class AppleTree {
   void Shake();
   
  private:
+  void Bloom(); 
+   
+  uint32_t flowers_number_;
   std::list<ApplePtr> apples_; 
 };
+
+typedef std::shared_ptr<AppleTree> AppleTreePtr;
+
+AppleTreePtr CreateAppleTree();
 
 #endif	/* APPLE_TREE_H */

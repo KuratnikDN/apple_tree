@@ -36,7 +36,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/src/apple.o \
-	${OBJECTDIR}/src/apple_tree.o
+	${OBJECTDIR}/src/apple_tree.o \
+	${OBJECTDIR}/src/main.o
 
 
 # C Compiler Flags
@@ -57,13 +58,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libapple_tree.a
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/apple_tree
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libapple_tree.a: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/apple_tree: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libapple_tree.a
-	${AR} -rv ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libapple_tree.a ${OBJECTFILES} 
-	$(RANLIB) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libapple_tree.a
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/apple_tree ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/src/apple.o: src/apple.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
@@ -75,13 +74,18 @@ ${OBJECTDIR}/src/apple_tree.o: src/apple_tree.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/apple_tree.o src/apple_tree.cpp
 
+${OBJECTDIR}/src/main.o: src/main.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/main.o src/main.cpp
+
 # Subprojects
 .build-subprojects:
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libapple_tree.a
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/apple_tree
 
 # Subprojects
 .clean-subprojects:
